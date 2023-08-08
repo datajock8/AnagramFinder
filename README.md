@@ -37,7 +37,7 @@ brew install typescript
 1. Run `npm install` to install necessary dependencies.
 1. Compile the TypeScript files using tsc.
 1. Run the compiled JavaScript file with your desired input string using the following command:
-   - 'node anagramFinder.js inputString  words.txt'
+   - `node anagramFinder.js inputString  words.txt`
    - Replace __inputString__ with the string for which you want to find the anagrams.
 
 # Words Dictionary
