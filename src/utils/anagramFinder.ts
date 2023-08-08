@@ -1,20 +1,28 @@
-/**
- * Finds all valid English words that can be created using some combination
- * of the letters in the given input string.
- * @param input - The input string.
- * @param WORDS - The array of valid English words.
- * @returns The array of possible words.
- */
+import * as fs from 'fs';
+
+const input = process.argv[2]; // Get the input string from the command line
+const wordsFilePath = process.argv[3]; // Get the path to the words file from the command line
+
+if (!input || !wordsFilePath) {
+    console.error('Please provide an input string as the first argument and the path to the words file as the second argument.');
+    process.exit(1);
+}
+
+// Read the WORDS from the provided file
+let WORDS: string[];
+try {
+    WORDS = fs.readFileSync(wordsFilePath, 'utf8').split('\n'); // Assuming one word per line
+} catch (error) {
+    console.error('Error reading words file:', error.message);
+    process.exit(1);
+}
+
 function getWords(input: string, WORDS: string[]): string[] {
-    
-    // Input validation to ensure it's a string
     if (typeof input !== 'string' || !Array.isArray(WORDS)) {
         throw new Error('Invalid input');
     }
-    
+
     let possibleWords = new Set<string>();
-    
-    // Putting into a set instead of array to improve lookup speed
     const wordSet = new Set(WORDS);
 
     function generatePermutations(str: string, prefix: string = ""): void {
@@ -36,3 +44,6 @@ function getWords(input: string, WORDS: string[]): string[] {
     generatePermutations(input);
     return Array.from(possibleWords);
 }
+
+const results = getWords(input, WORDS);
+console.log(results); // Outputs the possible anagrams
