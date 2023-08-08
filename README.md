@@ -15,3 +15,9 @@ The AnagramFinder is a powerful tool designed to unlock the potential words hidd
 
 # Performance:
 Optimized for performance, the feature leverages efficient algorithms and data structures to deliver results swiftly. However, it's recommended to limit the input string length to avoid potential extensive computations.
+
+# Dependencies
+
+NPM
+typescript
+
