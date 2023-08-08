@@ -1,1 +1,1 @@
-export { getWords } from './utils/wordUtils';
+export { anagramFinder } from './utils/anagramFinder';
