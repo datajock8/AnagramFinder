@@ -18,6 +18,30 @@ Optimized for performance, the feature leverages efficient algorithms and data s
 
 # Dependencies
 
-NPM
-typescript
+## Node.js
+Make sure Node.js is installed on your system. You can download it from here.
 
+## NPM
+Ensure you have NPM (Node Package Manager) installed, which comes with Node.js.
+
+## Typescript
+Install TypeScript using the following command:
+```brew install typescript```
+
+# How to run
+
+1. Clone the repository.
+1. Navigate to the project directory.
+1. Run ```npm install`````` to install necessary dependencies.
+1. Compile the TypeScript files using tsc.
+1. Run the compiled JavaScript file with your desired input string using the following command:
+   - '''node anagramFinder.js inputString  words.txt'''
+   - Replace __inputString__ with the string for which you want to find the anagrams.
+
+# Words Dictionary
+
+The __words.txt__ file contains the dictionary of 3,000 valid English words used for look-up. Ensure that this file is placed in the appropriate directory within the project. __Source__: https://www.ef.com/wwen/english-resources/english-vocabulary/top-3000-words/
+
+# Contibuting
+
+Feel free to contribute to the project by reporting issues or submitting pull requests.
