@@ -9,9 +9,11 @@ The AnagramFinder is a powerful tool designed to unlock the potential words hidd
 
 # Use Cases:
 
-*Word Games*: Enhance your gameplay in word-based games by identifying potential words from given letters.
-*Literary Analysis*: Discover hidden word patterns or potential anagrams in texts.
-*Education*: A useful tool for students to explore word formations and enhance vocabulary.
+**Word Game*s**: Enhance your gameplay in word-based games by identifying potential words from given letters.
+
+**Literary Analysis**: Discover hidden word patterns or potential anagrams in texts.
+
+**Education**: A useful tool for students to explore word formations and enhance vocabulary.
 
 # Performance:
 Optimized for performance, the feature leverages efficient algorithms and data structures to deliver results swiftly. However, it's recommended to limit the input string length to avoid potential extensive computations.
