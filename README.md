@@ -29,7 +29,7 @@ The AnagramFinder is a powerful tool designed to unlock the potential words hidd
 # Dependencies
 
 ## Node.js
-Make sure Node.js is installed on your system. You can download it from here.
+Make sure Node.js is installed on your system.
 
 ## NPM
 Ensure you have NPM (Node Package Manager) installed, which comes with Node.js.
