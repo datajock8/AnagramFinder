@@ -14,7 +14,17 @@ The AnagramFinder is a powerful tool designed to unlock the potential words hidd
 * __Education__: A useful tool for students to explore word formations and enhance vocabulary.
 
 # Performance:
-Optimized for performance, the feature leverages efficient algorithms and data structures to deliver results swiftly. However, it's recommended to limit the input string length to avoid potential extensive computations.
+
+* __Usage of Sets__: Utilizing Set for storing possible words and a word dictionary enhances the lookup speed, as the average time complexity for searching within a Set is O(1). This is an excellent choice for optimizing the lookup process, especially when dealing with large dictionaries.
+* __Permutation Generation__: The recursive algorithm used for generating permutations of the input string has a time complexity of O(n!), where n is the length of the input string. This can be computationally expensive for large strings, but it ensures that every possible permutation is explored.
+* __Substring Operations__: The algorithm uses the substring method, which has a time complexity of O(n). While this is generally efficient, it does add to the overall computational time, especially within the recursive loop.
+* __Recursive Stack__: The recursive nature of the permutation function may cause a stack overflow for very long strings. This is an inherent limitation of recursive algorithms and can be mitigated by limiting the input string's length.
+* __Set Storage__: The usage of Set ensures that there are no duplicate words, thus optimizing memory usage.
+* __Input String Length__: As the length of the input string grows, the number of permutations grows factorially. This can lead to a rapid increase in both processing time and memory usage. It's advisable to set practical limits on the input string's length to ensure responsive performance.
+* __Potential Optimizations__
+  - __Pruning__: Implementing pruning techniques to eliminate unnecessary recursion could optimize the performance further. For example, if a partial permutation cannot lead to a valid word, further exploration of that branch can be skipped.
+  - __Parallel Processing__: The algorithm could be parallelized to take advantage of multi-core processors, further reducing the execution time.
+  - __Caching__: Implementing caching strategies to store previously computed results might help in scenarios where repeated calculations occur.
 
 # Dependencies
 
@@ -31,7 +41,6 @@ brew install typescript
 ```
 
 # How to run
-
 1. Clone the repository.
 1. Navigate to the project directory.
 1. Run `npm install` to install necessary dependencies.
@@ -41,9 +50,7 @@ brew install typescript
    - Replace __inputString__ with the string for which you want to find the anagrams.
 
 # Words Dictionary
-
 The __words.txt__ file contains the dictionary of 3,000 valid English words used for look-up. Ensure that this file is placed in the appropriate directory within the project. __Source__: https://www.ef.com/wwen/english-resources/english-vocabulary/top-3000-words/
 
 # Contibuting
-
 Feel free to contribute to the project by reporting issues or submitting pull requests.
